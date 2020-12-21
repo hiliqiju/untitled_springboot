@@ -5,17 +5,27 @@ import com.liqiju.entity.Person;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*", allowCredentials = "true")
 public class IndexController {
 
-    @RequestMapping(value = "getInfo1", method = RequestMethod.GET)
-    public Info getInfo1() {
-        Person p = new Person(3, "唐婉", 20, "雨送黄昏花易落");
-        Info info = new Info(200, "成功", p);
+    @RequestMapping(value = "getInfo1/{id}", method = RequestMethod.GET)
+    public Info getInfo1(@PathVariable int id) {
+        Person p = new Person(0, "空", 0, "空");
+        Info info = new Info(400, "id不存在", p);
+
+        if (id == 1) {
+            p = new Person(1, "唐婉", 20, "雨送黄昏花易落");
+            info = new Info(200, "成功", p);
+        }
+        if (id == 2) {
+            p = new Person(2, "陆游", 20, "江南小陌又逢春");
+            info = new Info(200, "成功", p);
+        }
 
         return info;
     }
 
-    @GetMapping("/")
+    @GetMapping("/helloworld")
     public Person getInfo() {
         Person p = new Person(1, "李沁", 18, "沁人心脾");
         return p;
