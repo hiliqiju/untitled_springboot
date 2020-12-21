@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo4" />
         <module name="sbrestfultest" />
+        <module name="demo7" />
+        <module name="demo6" />
         <module name="demo5" />
       </profile>
     </annotationProcessing>
@@ -16,6 +18,8 @@
       <module name="demo2" target="1.5" />
       <module name="demo4" target="1.8" />
       <module name="demo5" target="1.8" />
+      <module name="demo6" target="1.8" />
+      <module name="demo7" target="1.8" />
       <module name="sbrestfultest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +27,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo4" options="-parameters" />
       <module name="demo5" options="-parameters" />
+      <module name="demo6" options="-parameters" />
+      <module name="demo7" options="-parameters" />
       <module name="sbrestfultest" options="-parameters" />
     </option>
   </component>
